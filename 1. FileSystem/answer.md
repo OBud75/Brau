@@ -59,3 +59,11 @@ chmod +x script
 
 La première ligne d'un script contient le shebang, qui indique au shell quel interpréteur utiliser quand on exécute un programme avec `./` .
 Si on utilise ``bash script`` à la place, le script sera exécuté par bash sans tenir compte du shebang. 
+
+Oui
+
+Il y a une petite subtilité côté permissions : 
+
+Avec ./script, la présence des permissions d'exécution est indispensable car le système vérifie que le fichier est exécutable.
+
+Avec bash script, bash lit simplement le contenu du fichier grâce aux permissions de lecture.
