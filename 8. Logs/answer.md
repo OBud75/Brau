@@ -22,6 +22,8 @@ sudo vi /etc/systemd/journald.conf
 SystemMaxUse=200M
 ```
 
+Il est possible de simplifier la manipulation du fichier avec sudo systemctl edit systemd-journald
+
 ```sh 
 /var/log/nginx/*.log {
     monthly
@@ -39,4 +41,4 @@ SystemMaxUse=200M
     endscript
 }
 ```
-Les règles de rotation de logs permettent de conserver de l'espace disque sur un serveur, qui n'en a pas forcément beaucoup.
+Les règles de rotation de logs permettent de conserver de l'espace disque sur un serveur, qui n'en a pas forcément beaucoup. (ou alors merci la facture)
