@@ -10,6 +10,10 @@ do
 done
 
 ```
+On peut aussi faire
+touch img_{1..10}.png
+
+Si la syntaxe avec la boucle vous semble plus explicite (et donc moins susceptible d'introduire des erreurs), gardez celle la
 
 ```sh
 touch du_texte.txt && echo "Hello, World" > du_texte.txt
@@ -30,6 +34,12 @@ mv *.jpeg media
 ```
 
 Les formats de fichier servent à représenter facilement le type de fichier auquel l'utilisateur peut s'attendre. Il n'y a cependant pas besoin de mettre les extensions de fichier dans Linux, à part pour l'ergonomie.
+
+Oui
+Dans certains cas (à la marge) cela aide le programme lancé pour lire le fichier
+Un bon exemple est la manière dont certaines applications graphiques ou multimédias sous Linux se comportent :
+Si on essaiee d’ouvrir un fichier .jpg avec un éditeur de texte comme nano, il ne prendra pas en compte l’extension et affichera du texte illisible.
+Par contre, si on le renomme en .txt et qu'on tente de l’ouvrir avec "Eye of GNOME" (visionneuse d'images), il refusera de le charger.
 
 ```sh
 touch script
