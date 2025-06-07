@@ -58,3 +58,11 @@ check_argv $1;
 
 Un if/else fait tous les tests jusqu'à trouver un résultat correct ou arriver à la fin des tests, alors que le case ne fait que le test nécessaire.
 
+
+C'est ca, du coup dans les faits on aura tendance à utiliser un switch quand tous les cas on à peu près autant de chance d'arriver,
+
+Alors qu'avec un if/else if on vérifie des conditions spécifiques (de la plus probable à la moins probable).
+
+Niveau algo, sauf optimisation spécifique, if/else if/else sera linéaire O(n)
+
+Pour un switch pareil cela dépend de l'implémentation du compilateur mais à priori il va générer une jump table et l'algo sera donc en O(1), similiaire à une hash table.
