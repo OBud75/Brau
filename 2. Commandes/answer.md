@@ -12,6 +12,25 @@ do
 done
 ``` 
 
+On peut penser à faire
+
+```echo Ligne{1..100} > too_long```
+
+Probleme : cela ne va pas revenir à la ligne mais écrire : "Ligne1 Ligne2 Ligne3 ..."
+
+Du coup, ajouter des "\n"
+
+Problème : 
+
+```echo "Ligne{1..100}\n"``` 
+
+Ne fonctionnera pas car il y a un formattage de la chaine
+
+Ici c'est possiblement un bon cas d'utilisation pour printf
+
+``` printf "Ligne %s\n" {1..100} > too_long``` 
+
+
 ```sh 
 head -n 5 too_long
 tail -n 7 too_long
